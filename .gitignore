@@ -1,0 +1,10 @@
+*.log
+*.mo
+*.pyc
+*.py~
+solr
+bin
+lib
+include
+var
+local

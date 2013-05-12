@@ -1,0 +1,15 @@
+You're here:
+<a href="/">home</a> /
+<a href="{% url 'cars:list' %}">cars</a> /
+{{ carmodel.pk }}
+<hr />
+
+
+<h1>{{ carmodel }}</h1>
+<dl>
+	<dt>Manufacturer</dt><dd>{{ carmodel.manufacturer }}</dd>
+	<dt>Country</dt><dd>{{ carmodel.manufacturer.country }}</dd>
+	<dt>Name</dt><dd>{{ carmodel.name }}</dd>
+	<dt>Price</dt><dd>&euro; {{ carmodel.price }}</dd>
+	<dt>Milage</dt><dd>{{ carmodel.milage }} l/100km</dd>
+</dl>

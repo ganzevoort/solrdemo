@@ -1,0 +1,11 @@
+You're here:
+<a href="/">home</a> /
+cars
+<hr />
+
+<h1>Cars</h1>
+<ul>
+	{% for carmodel in carmodel_list %}
+	<li><a href="{% url 'cars:detail' carmodel.pk %}">{{ carmodel }}</a></li>
+	{% endfor %}
+</ul>
