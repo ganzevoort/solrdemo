@@ -1,0 +1,2 @@
+{{ object.manufacturer }} {{ object.name }}
+{{ object.manufacturer.country }}

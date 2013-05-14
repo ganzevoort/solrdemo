@@ -115,7 +115,17 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cars',
+    'haystack',
 )
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'SOLR_VERSION': '4.2.1',
+        'URL': 'http://127.0.0.1:8983/solr',
+    },
+}
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
