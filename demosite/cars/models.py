@@ -15,6 +15,7 @@ class Manufacturer(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class CarModel(models.Model):
     name = models.CharField(max_length=200)
     manufacturer = models.ForeignKey(Manufacturer)
