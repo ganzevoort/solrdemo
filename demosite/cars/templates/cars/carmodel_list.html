@@ -1,11 +1,16 @@
-You're here:
+{% extends 'base.html' %}
+
+{% block 'breadcrumb' %}
 <a href="/">home</a> /
 cars
-<hr />
+{% endblock %}
 
-<h1>Cars</h1>
-<ul>
-	{% for carmodel in carmodel_list %}
-	<li><a href="{% url 'cars:detail' carmodel.pk %}">{{ carmodel }}</a></li>
-	{% endfor %}
-</ul>
+{% block 'title' %}Cars{% endblock %}
+
+{% block 'main' %}
+  <ul>
+  {% for carmodel in carmodel_list %}
+    <li><a href="{% url 'cars:detail' carmodel.pk %}">{{ carmodel }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}

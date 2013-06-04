@@ -1,15 +1,21 @@
-You're here:
+{% extends 'base.html' %}
+
+{% block 'breadcrumb' %}
 <a href="/">home</a> /
 <a href="{% url 'cars:list' %}">cars</a> /
 {{ carmodel.pk }}
-<hr />
+{% endblock %}
 
+{% block 'title' %}
+{{ carmodel }}
+{% endblock %}
 
-<h1>{{ carmodel }}</h1>
+{% block 'main' %}
 <dl>
-	<dt>Manufacturer</dt><dd>{{ carmodel.manufacturer }}</dd>
-	<dt>Country</dt><dd>{{ carmodel.manufacturer.country }}</dd>
-	<dt>Name</dt><dd>{{ carmodel.name }}</dd>
-	<dt>Price</dt><dd>&euro; {{ carmodel.price }}</dd>
-	<dt>Milage</dt><dd>{{ carmodel.milage }} l/100km</dd>
+  <dt>Manufacturer</dt><dd>{{ carmodel.manufacturer }}</dd>
+  <dt>Country</dt><dd>{{ carmodel.manufacturer.country }}</dd>
+  <dt>Name</dt><dd>{{ carmodel.name }}</dd>
+  <dt>Price</dt><dd>&euro; {{ carmodel.price }}</dd>
+  <dt>Milage</dt><dd>{{ carmodel.milage }} l/100km</dd>
 </dl>
+{% endblock %}

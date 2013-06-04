@@ -30,3 +30,10 @@ application = get_wsgi_application()
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
+
+from diazo.wsgi import DiazoMiddleware
+application = DiazoMiddleware(
+        app=application,
+        global_conf=None,
+        rules='demosite/static/rules.xml',
+        prefix='/static/example/')

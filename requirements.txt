@@ -1,3 +1,6 @@
 Django
 pysolr
 django-haystack
+diazo
+webob
+repoze.xmliter

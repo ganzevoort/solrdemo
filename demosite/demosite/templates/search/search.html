@@ -1,5 +1,15 @@
-<h2>Search</h2>
+{% extends 'base.html' %}
 
+{% block 'breadcrumb' %}
+<a href="/">home</a> /
+search
+{% endblock %}
+
+{% block 'title' %}
+Search
+{% endblock %}
+
+{% block 'main' %}
 <form method="get" action=".">
 <table>
     {{ form.as_table }}
@@ -28,3 +38,4 @@
     {# Show some example queries to run, maybe query syntax, something else? #}
 {% endif %}
 </form>
+{% endblock %}
