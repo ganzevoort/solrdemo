@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+	xmlns:css="http://namespaces.plone.org/diazo/css"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<theme href="examples/starter-template.html" />
+
+	<replace theme="/html/head/title"
+		content="/html/head/title" />
+
+	<replace css:theme-children="h1"
+		css:content-children="#title" />
+
+	<replace css:theme="body > div.container > p"
+		css:content="#main" />
+
+	<replace css:theme-children="a.brand"
+		content-children="/html/head/title" />
+
+	<replace css:theme-children="ul.nav"
+		css:content-children="#menu" />
+
+	<replace content="//input[@type='submit']">
+		<xsl:element name="input">
+			<xsl:copy-of select="@*" />
+			<xsl:attribute name="class">
+				btn
+			</xsl:attribute>
+		</xsl:element>
+	</replace>
+
+</rules>

@@ -1,6 +1,7 @@
 Django
 pysolr
 django-haystack
+simplejson
 diazo
 webob
 repoze.xmliter
